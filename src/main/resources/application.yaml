@@ -2,10 +2,16 @@ spring:
   application:
     name: consumer-service
 
+  amqp:
+    deserialization:
+      trust:
+        all: true # permite desserializar qualquer classe (cuidado em produção)
+
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
+
 server:
   port: 8082
